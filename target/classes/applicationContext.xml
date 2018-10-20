@@ -8,7 +8,7 @@
 	</bean>
 
 	<bean name="CustomerService"
-		class="com.fdmgroup.service.CustomerServiceImpl" autowire="constructor">
+		class="com.fdmgroup.service.CustomerServiceImpl" autowire="byType">
 <!-- 		<constructor-arg index="0" ref="CustomerRepository"></constructor-arg> -->
 		
 	</bean>
