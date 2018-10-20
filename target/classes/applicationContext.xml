@@ -9,6 +9,6 @@
 
 	<bean name="CustomerService"
 		class="com.fdmgroup.service.CustomerServiceImpl">
-		<property name="customerRepository" ref="CustomerRepository"></property>
+		<constructor-arg index="0" ref="CustomerRepository"></constructor-arg>
 	</bean>
 </beans>
