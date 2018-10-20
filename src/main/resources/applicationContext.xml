@@ -4,6 +4,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean name="CustomerRepository" 
-	class="com.fdmgroup.repository.HibernateCustomerRepositoryImpl"></bean>
+		class="com.fdmgroup.repository.HibernateCustomerRepositoryImpl">
+	</bean>
 
+	<bean name="CustomerService"
+		class="com.fdmgroup.service.CustomerServiceImpl">
+		<property name="customerRepository" ref="CustomerRepository"></property>
+	</bean>
 </beans>
