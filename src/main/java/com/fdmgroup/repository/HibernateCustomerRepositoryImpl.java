@@ -7,11 +7,20 @@ import com.fdmgroup.model.Customer;
 
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
-	/* (non-Javadoc)
-	 * @see com.fdmgroup.repository.CustomerRepository#findAll()
-	 */
+	private String dbUsername;
+	
+	public String getDbUsername() {
+		return dbUsername;
+	}
+
+	public void setDbUsername(String dbUsername) {
+		this.dbUsername = dbUsername;
+	}
+
 	@Override
 	public List<Customer> findAll() {
+		System.out.println(dbUsername);
+		
 		List<Customer> customers = new ArrayList<>();
 		
 		Customer customer = new Customer();
